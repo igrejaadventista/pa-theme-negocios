@@ -15,6 +15,8 @@ require_once(dirname(__FILE__) . '/classes/PA_Theme_Handler.php');
 
 add_action('after_setup_theme', function () {
     load_theme_textdomain('iasd', get_stylesheet_directory() . '/language/');
+
+    add_theme_support('custom-logo');
 }, 9);
 
 /**
