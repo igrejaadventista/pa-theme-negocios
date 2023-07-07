@@ -32,3 +32,14 @@ add_action('wp_loaded', function () {
     unregister_taxonomy_for_object_type('xtt-pa-owner', 'post');
     unregister_taxonomy_for_object_type('xtt-pa-materiais', 'post');
 });
+
+add_filter('iasd_global_menu', function($menu, $name) {
+    if($name != 'global-footer')
+        return $menu;
+
+    $menu = array_filter($menu, function($item) {
+        return $item->name == 'Sobre Nós';
+    });
+
+    return $menu;
+}, 10, 2);

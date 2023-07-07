@@ -1,0 +1,80 @@
+.pa-footer {
+    background-color: var( --e-global-color-primary ) !important;
+
+    & > .container {
+        max-width: 1140px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .custom-logo {
+        max-width: 168px;
+    }
+
+    hr {
+        background-color: var( --e-global-color-4bfdb6a ) !important;
+        opacity: 1;
+        width: 87px !important;
+    }
+
+    .pa-contact {
+        .pa-adress,
+        .pa-telephone {
+            color: var( --e-global-color-eb8baa4 ) !important;
+            display: flex !important;
+            font-family: var( --e-global-typography-69c1826-font-family ), Sans-serif;
+            font-size: var( --e-global-typography-69c1826-font-size );
+            line-height: var( --e-global-typography-69c1826-line-height ) !important;
+            letter-spacing: var( --e-global-typography-69c1826-letter-spacing );
+            word-spacing: var( --e-global-typography-69c1826-word-spacing );
+
+            &::before {
+                color: var( --e-global-color-eb8baa4 ) !important;
+                font-size: var(--e-icon-list-icon-size) !important;
+            }
+        }
+    }
+}
+
+.pa-social-network {
+    margin-top: 24px;
+
+    span {
+        color: var( --e-global-color-eb8baa4 );
+        font-family: var( --e-global-typography-507e861-font-family ), Sans-serif;
+        font-size: var( --e-global-typography-507e861-font-size ) !important;
+        font-weight: var( --e-global-typography-507e861-font-weight );
+        line-height: var( --e-global-typography-507e861-line-height );
+        letter-spacing: var( --e-global-typography-507e861-letter-spacing );
+        word-spacing: var( --e-global-typography-507e861-word-spacing );
+    }
+
+    .fab {
+        color: var( --e-global-color-183d826 ) !important;
+        font-size: 24px !important;
+    }
+}
+
+.pa-copyright {
+    background-color: var( --e-global-color-secondary ) !important;
+    padding: 18px 0px 14px 0px;
+
+    .row {
+        margin: 0 !important;
+    }
+
+    & > .container,
+    .flex-xl-row {
+        max-width: 1140px;
+        padding: 0 !important;
+    }
+
+    span {
+        color: var( --e-global-color-eb8baa4 );
+        font-family: var( --e-global-typography-394f4fe-font-family ), Sans-serif;
+        font-size: var( --e-global-typography-394f4fe-font-size );
+        line-height: var( --e-global-typography-394f4fe-line-height );
+        letter-spacing: var( --e-global-typography-394f4fe-letter-spacing );
+        word-spacing: var( --e-global-typography-394f4fe-word-spacing );
+    }
+}
