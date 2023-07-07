@@ -21,18 +21,35 @@
         .pa-adress,
         .pa-telephone {
             color: var( --e-global-color-eb8baa4 ) !important;
-            display: flex !important;
+            display: block !important;
             font-family: var( --e-global-typography-69c1826-font-family ), Sans-serif;
             font-size: var( --e-global-typography-69c1826-font-size );
             line-height: var( --e-global-typography-69c1826-line-height ) !important;
             letter-spacing: var( --e-global-typography-69c1826-letter-spacing );
             word-spacing: var( --e-global-typography-69c1826-word-spacing );
+            text-align: center;
+
+            @media (min-width: 768px) {
+                display: flex !important;
+                text-align: left;
+            }
 
             &::before {
                 color: var( --e-global-color-eb8baa4 ) !important;
                 font-size: var(--e-icon-list-icon-size) !important;
             }
         }
+    }
+
+    .btn {
+        font-size: 13px;
+        line-height: 22px;
+        padding: 14px 32px 14px 32px;
+        font-family: "Noto Sans", Sans-serif;
+        font-weight: 500;
+        fill: var( --e-global-color-d7ef768 );
+        color: var( --e-global-color-d7ef768 );
+        background-color: var( --e-global-color-text );
     }
 }
 
