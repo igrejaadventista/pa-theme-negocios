@@ -13,7 +13,6 @@
     padding: 0 !important;
     border-style: solid;
     border-width: 0px 0px 1px 0px;
-    border-color: var( --e-global-color-4bfdb6a );
 }
 
 .pa-header-logo {
@@ -23,8 +22,6 @@
 #menu-menu-principal {
     .nav-link {
         border: none !important;
-        color: var( --e-global-color-183d826 ) !important;
-        fill: var( --e-global-color-183d826 );
         padding-left: 12px;
         padding-right: 12px;
         padding-top: 20px;
@@ -65,7 +62,6 @@
 
     .nav-link {
         padding: 0 !important;
-        color: var( --e-global-color-d7ef768 ) !important;
         font-family: var( --e-global-typography-7a6583d-font-family ), Sans-serif;
         font-size: var( --e-global-typography-7a6583d-font-size ) !important;
         font-weight: var( --e-global-typography-7a6583d-font-weight );
@@ -82,10 +78,8 @@
 }
 
 .pa-menu-mobile {
-    background-color: var( --e-global-color-primary );
     border-style: solid;
-    border-color: var( --e-global-color-4bfdb6a );
-    border-width: 1px 0px 1px 0px;
+    border-width: 0px 0px 1px 0px;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 10px !important;
 
@@ -151,5 +145,65 @@
     .custom-logo {
         max-height: 73px;
         width: auto;
+    }
+}
+
+body {
+    &.home {
+        #menu-menu-principal {
+            .nav-link {
+                color: var( --e-global-color-183d826 ) !important;
+                fill: var( --e-global-color-183d826 );
+            }
+        }  
+        
+        .pa-menu-desktop {
+            border-color: var( --e-global-color-4bfdb6a );
+        }
+
+        .pa-menu-global {
+            .nav-link {
+                color: var( --e-global-color-d7ef768 ) !important;
+            }
+        }
+
+        .pa-menu-mobile {
+            background-color: var( --e-global-color-primary );
+            border-color: var( --e-global-color-4bfdb6a );
+        }
+    }
+
+    &:not(.home) {
+        #menu-menu-principal {
+            .nav-link {
+                color: var( --e-global-color-primary ) !important;
+                fill: var( --e-global-color-primary );
+            }
+        }  
+
+        .pa-menu-desktop {
+            border-color: var( --e-global-color-accent );
+        }
+
+        #topo {
+            .custom-logo {
+                filter: brightness(0) invert(1);
+            }
+        }
+        
+        .pa-menu-global {
+            .nav-link {
+                color: var( --e-global-color-primary ) !important;
+            }
+        }
+
+        .pa-menu-mobile {
+            background-color: transparent;
+            border-color: var( --e-global-color-accent );
+        }
+
+        .fa-bars {
+            color: var( --e-global-color-primary );
+        }
     }
 }
