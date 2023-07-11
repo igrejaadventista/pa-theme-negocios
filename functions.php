@@ -19,20 +19,6 @@ add_action('after_setup_theme', function () {
     add_theme_support('custom-logo');
 }, 9);
 
-/**
- * Remove unused taxonomies
- */
-add_action('wp_loaded', function () {
-    unregister_taxonomy_for_object_type('xtt-pa-colecoes', 'post');
-    unregister_taxonomy_for_object_type('xtt-pa-departamentos', 'post');
-    unregister_taxonomy_for_object_type('xtt-pa-editorias', 'post');
-    unregister_taxonomy_for_object_type('xtt-pa-projetos', 'post');
-    unregister_taxonomy_for_object_type('xtt-pa-regiao', 'post');
-    unregister_taxonomy_for_object_type('xtt-pa-sedes', 'post');
-    unregister_taxonomy_for_object_type('xtt-pa-owner', 'post');
-    unregister_taxonomy_for_object_type('xtt-pa-materiais', 'post');
-});
-
 add_filter('iasd_global_menu', function($menu, $name) {
     if($name != 'global-footer')
         return $menu;
@@ -43,3 +29,24 @@ add_filter('iasd_global_menu', function($menu, $name) {
 
     return $menu;
 }, 10, 2);
+
+/**
+ * Add fallback post image
+ */
+add_action('customize_register', function($wp_customize) {
+    $wp_customize->add_setting('footer_logo', [
+        'capability' => 'edit_theme_options',
+    ]);
+
+    $wp_customize->add_control(new \WP_Customize_Media_Control(
+        $wp_customize,
+        'footer_logo',
+        array(
+            'label'       => 'Logo do footer',
+            'description' => 'Imagem a ser exibida como logo no footer',
+            'mime_type'   => 'image',
+            'section'     => 'title_tagline',
+            'settings'    => 'footer_logo',
+        )
+    ));
+});
