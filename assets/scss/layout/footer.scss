@@ -1,38 +1,33 @@
 .pa-footer {
-    background-color: var( --e-global-color-primary ) !important;
+    background-color: var(--primary-color-bue-7, #00080F) !important;
+
+    .pa-menu:not(:last-of-type) {
+        border-bottom: none !important;
+
+        > ul {
+            padding-left: 65px;
+        }
+    }
+
 
     & > .container {
-        max-width: 1140px !important;
+        max-width: 1204px !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
     .custom-logo {
-        max-width: 168px;
+        max-width: 183px;
     }
 
     hr {
-        background-color: var( --e-global-color-4bfdb6a ) !important;
+        background-color: var(--primary-color-bue-7, #00080F) !important;
         opacity: 1;
         width: 87px !important;
     }
 
     .pa-contact {
-        .pa-adress,
-        .pa-telephone {
-            color: var( --e-global-color-eb8baa4 ) !important;
-            display: block !important;
-            font-family: var( --e-global-typography-69c1826-font-family ), Sans-serif;
-            font-size: var( --e-global-typography-69c1826-font-size );
-            line-height: var( --e-global-typography-69c1826-line-height ) !important;
-            letter-spacing: var( --e-global-typography-69c1826-letter-spacing );
-            word-spacing: var( --e-global-typography-69c1826-word-spacing );
-            text-align: center;
-
-            @media (min-width: 768px) {
-                display: flex !important;
-                text-align: left;
-            }
+        .pa-adress {
 
             &::before {
                 color: var( --e-global-color-eb8baa4 ) !important;
@@ -54,21 +49,24 @@
 }
 
 .pa-social-network {
-    margin-top: 24px;
-
     span {
-        color: var( --e-global-color-eb8baa4 );
-        font-family: var( --e-global-typography-507e861-font-family ), Sans-serif;
-        font-size: var( --e-global-typography-507e861-font-size ) !important;
-        font-weight: var( --e-global-typography-507e861-font-weight );
-        line-height: var( --e-global-typography-507e861-line-height );
-        letter-spacing: var( --e-global-typography-507e861-letter-spacing );
-        word-spacing: var( --e-global-typography-507e861-word-spacing );
+        color: #fff;
+        text-align: right;
+        font-family: Noto Sans;
+        font-size: 12px !important;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 200% */
     }
 
     .fab {
-        color: var( --e-global-color-183d826 ) !important;
-        font-size: 24px !important;
+        margin-right: 10px;
+        color: #fff !important;
+        font-size: 16.5px !important;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
