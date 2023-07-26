@@ -1,5 +1,5 @@
 <div class="pa-copyright">
-  <div class="container">
+  <div class="container p-0">
     <div class="row">
       <div class="mt-2 mt-lg-0 py-2 d-flex flex-xl-row justify-content-xl-between flex-column align-items-center">
         <div class="d-flex align-items-center">
