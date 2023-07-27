@@ -20,14 +20,18 @@
         border-bottom: none !important;
 
         > ul {
-            padding-left: 65px;
+            @media only screen and (min-width: 1200px) {
+                padding-left: 65px;
+            }
         }
     }
 
 
     & > .container {
-        border-bottom: 1px solid #002E5C;
-        max-width: 1204px !important;
+        @media only screen and (min-width: 1200px) {
+            border-bottom: 1px solid #002E5C;
+            max-width: 1204px !important;
+        }
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
@@ -43,13 +47,22 @@
     }
 
     .pa-contact {
-        padding-left: 65px;
+        text-align: center;
+        @media only screen and (min-width: 1200px) {
+            padding-left: 65px;
+            text-align: left;
+        }
         .pa-adress {
             color: var(--primary-color-white, #FFF) !important;
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
             line-height: 18px !important; /* 150% */
+
+            @media only screen and (max-width: 1200px) {
+                max-width: 270px;
+                margin: 0 auto;
+            }
             &::before {
                 color: var( --primary-color-white ) !important;
                 font-size: 12px !important;
@@ -112,10 +125,11 @@
     }
 
     & > .container {
-        max-width: 1204px !important;
+        @media only screen and (min-width: 1200px) {
+            max-width: 1204px !important;
+        }
     }
     .flex-xl-row {
-        max-width: 1204px;
         padding: 0 !important;
     }
 
