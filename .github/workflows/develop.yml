@@ -68,7 +68,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_DEV_DEPLOY_HOST }}
           username: jptiberio
-          key: ${{ secrets.SSH_DEV_DEPLOY_KEY}}
+          password: ${{ secrets.SUDO}}
           port: 22
           script: |
             echo "${{ secrets.SUDO }}" | sudo -S chown -R www-data:www-data  /mnt/intest_volume_timejp/negocios-adventistas/public/wp-content/themes/pa-theme-negocios
