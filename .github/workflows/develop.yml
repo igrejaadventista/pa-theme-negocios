@@ -49,14 +49,14 @@ jobs:
           key: ${{ secrets.SSH_DEV_DEPLOY_KEY}}
           port: 22
           script: |
-            echo "${{ secrets.SUDO }}" | sudo -S chmod -R 777  /var/www/adventistas/pt/wp-content/themes/PA-Theme-Sedes-Child
+            echo "${{ secrets.SUDO }}" | sudo -S chmod -R 777  /mnt/intest_volume_timejp/negocios-adventistas/public/wp-content/themes/pa-theme-negocios
             
       - name: Copiando theme downloads
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: --no-perms -O --filter="merge rsync-filter.txt" --delete -Prltvz
           path: ./
-          remote_path: /var/www/adventistas/pt/wp-content/themes/PA-Theme-Sedes-Child
+          remote_path: /mnt/intest_volume_timejp/negocios-adventistas/public/wp-content/themes/pa-theme-negocios
           remote_host: ${{ secrets.SSH_DEV_DEPLOY_HOST }}
           remote_port: 22
           remote_user: root
@@ -71,6 +71,6 @@ jobs:
           key: ${{ secrets.SSH_DEV_DEPLOY_KEY}}
           port: 22
           script: |
-            echo "${{ secrets.SUDO }}" | sudo -S chown -R www-data:www-data  /var/www/adventistas
-            echo "${{ secrets.SUDO }}" | sudo -S find  /var/www/adventistas -type d -exec chmod 750 {} \;
-            echo "${{ secrets.SUDO }}" | sudo -S find /var/www/adventistas -type f -exec chmod 640 {} \;
+            echo "${{ secrets.SUDO }}" | sudo -S chown -R www-data:www-data  /mnt/intest_volume_timejp/negocios-adventistas/public/wp-content/themes/pa-theme-negocios
+            echo "${{ secrets.SUDO }}" | sudo -S find  /mnt/intest_volume_timejp/negocios-adventistas/public/wp-content/themes/pa-theme-negocios -type d -exec chmod 750 {} \;
+            echo "${{ secrets.SUDO }}" | sudo -S find /mnt/intest_volume_timejp/negocios-adventistas/public/wp-content/themes/pa-theme-negocios -type f -exec chmod 640 {} \;
