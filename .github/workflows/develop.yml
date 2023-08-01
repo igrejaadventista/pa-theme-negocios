@@ -45,7 +45,7 @@ jobs:
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SSH_DEV_DEPLOY_HOST }}
-          username: root
+          username: jptiberio
           key: ${{ secrets.SSH_DEV_DEPLOY_KEY}}
           port: 22
           script: |
@@ -59,7 +59,7 @@ jobs:
           remote_path: /mnt/intest_volume_timejp/negocios-adventistas/public/wp-content/themes/pa-theme-negocios
           remote_host: ${{ secrets.SSH_DEV_DEPLOY_HOST }}
           remote_port: 22
-          remote_user: root
+          remote_user: jptiberio
           remote_key: ${{ secrets.SSH_DEV_DEPLOY_KEY }}
              
 
@@ -67,7 +67,7 @@ jobs:
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SSH_DEV_DEPLOY_HOST }}
-          username: root
+          username: jptiberio
           key: ${{ secrets.SSH_DEV_DEPLOY_KEY}}
           port: 22
           script: |
