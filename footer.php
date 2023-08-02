@@ -71,3 +71,8 @@ $menus = PaThemeHelpers::getGlobalMenu('global-footer');
 
     <?php get_template_part('components/menu/copyright', 'copyright'); ?>
 </footer>
+
+<?php wp_footer(); ?>
+
+</body>
+</html>
