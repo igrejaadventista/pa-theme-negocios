@@ -1,6 +1,13 @@
 .pa-footer {
     background-color: var(--primary-color-bue-7, #00080F) !important;
 
+    .pa-brand {
+        img {
+            max-width: 205px;
+            height: auto;
+        }
+    }
+
     .pa-menu {
         ul {
             li {
