@@ -42,11 +42,33 @@ add_action('customize_register', function($wp_customize) {
         $wp_customize,
         'footer_logo',
         array(
-            'label'       => 'Logo do footer',
-            'description' => 'Imagem a ser exibida como logo no footer',
+            'label'       => 'Logo do footer Desktop',
+            'description' => 'Imagem a ser exibida como logo no footer (Desktop)',
             'mime_type'   => 'image',
             'section'     => 'title_tagline',
             'settings'    => 'footer_logo',
+        )
+    ));
+});
+
+
+/**
+ * Add Logo Footer Mobile
+ */
+add_action('customize_register', function($wp_customize) {
+    $wp_customize->add_setting('footer_logo_mobile', [
+        'capability' => 'edit_theme_options',
+    ]);
+
+    $wp_customize->add_control(new \WP_Customize_Media_Control(
+        $wp_customize,
+        'footer_logo_mobile',
+        array(
+            'label'       => 'Logo do footer Mobile',
+            'description' => 'Imagem a ser exibida como logo no footer (Mobile)',
+            'mime_type'   => 'image',
+            'section'     => 'title_tagline',
+            'settings'    => 'footer_logo_mobile',
         )
     ));
 });

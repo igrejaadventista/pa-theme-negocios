@@ -4,6 +4,7 @@
     .pa-menu {
         ul {
             li {
+                line-height: 20px;
                 a {
                     color: var(--primary-color-white, #FFF);
                     font-family: Noto Sans;
@@ -48,11 +49,20 @@
 
     .pa-contact {
         text-align: center;
+        border-bottom: 1px solid #00172E;
+        max-width: 90%;
+        margin: 0 auto;
+
         @media only screen and (min-width: 1200px) {
             padding-left: 65px;
             text-align: left;
+            border: none;
+            max-width: 100%;
+            margin: unset;
         }
-        .pa-adress {
+
+
+        .pa-adress, .pa-telephone {
             color: var(--primary-color-white, #FFF) !important;
             font-size: 12px;
             font-style: normal;
@@ -64,9 +74,13 @@
                 margin: 0 auto;
             }
             &::before {
-                color: var( --primary-color-white ) !important;
+                color: var( --primary-color-white, #FFF ) !important;
                 font-size: 12px !important;
             }
+        }
+        .pa-telephone {
+            margin-top: 10px !important;
+            padding-bottom: 20px !important;
         }
     }
 
@@ -125,8 +139,17 @@
     }
 
     & > .container {
+
+        svg {
+            display: none;
+        }
+
         @media only screen and (min-width: 1200px) {
             max-width: 1204px !important;
+
+            svg {
+                display: block;
+            }
         }
     }
     .flex-xl-row {

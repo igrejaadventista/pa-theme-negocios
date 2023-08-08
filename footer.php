@@ -41,6 +41,11 @@ $menus = PaThemeHelpers::getGlobalMenu('global-footer');
                     <?php if ($adress) {
                         ?><span class="pa-adress d-block lh-lg"><?= $adress ?></span><?php
                     } ?>
+                    <?php if ($adress) { ?>
+                    <span class="pa-telephone text-white d-block d-lg-none">
+                        <?= $telephone?>
+                    </span>
+                    <?php } ?>
                 </div>
             </div>
 
@@ -50,16 +55,16 @@ $menus = PaThemeHelpers::getGlobalMenu('global-footer');
                         <span><?= _e('Our social networks', 'iasd'); ?></span>
                         <div class="icons">
                             <?php if ($facebook) {
-                                ?><a href="<?= $facebook ?>" title="Facebook"><i class="fab fa-facebook-f"></i></a><?php
+                                ?><a target="_blank"  href="<?= $facebook ?>" title="Facebook"><i class="fab fa-facebook-f"></i></a><?php
                             } ?>
                             <?php if ($twitter) {
-                                ?><a href="<?= $twitter ?>" title="Twitter"><i class="fab fa-twitter"></i></a><?php
+                                ?><a target="_blank" href="<?= $twitter ?>" title="Twitter"><i class="fab fa-twitter"></i></a><?php
                             } ?>
                             <?php if ($youtube) {
-                                ?><a href="<?= $youtube ?>" title="Youtube"><i class="fab fa-youtube"></i></a><?php
+                                ?><a target="_blank" href="<?= $youtube ?>" title="Youtube"><i class="fab fa-youtube"></i></a><?php
                             } ?>
                             <?php if ($instagram) {
-                                ?><a href="<?= $instagram ?>" title="Instagram"><i class="fab fa-instagram"></i></a><?php
+                                ?><a target="_blank" href="<?= $instagram ?>" title="Instagram"><i class="fab fa-instagram"></i></a><?php
                             } ?>
                         </div>
                     </div>
